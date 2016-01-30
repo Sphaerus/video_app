@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #views
 gem "haml-rails", "~> 0.9"
+gem 'simple_form'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
