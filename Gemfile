@@ -31,6 +31,8 @@ gem 'simple_form'
 
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
+#upload
+gem "paperclip", "~> 4.3"
 # Use Unicorn as the app server
 # gem 'unicorn'
 
