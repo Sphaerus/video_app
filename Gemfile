@@ -33,6 +33,9 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 
 #upload
 gem "paperclip", "~> 4.3"
+
+#authentication
+gem 'devise'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
