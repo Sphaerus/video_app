@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'home#index'
 
-   resources :movies
+   resources :movies do
+     get :last_image, on: :member
+     resources :images, only: [:destroy, :create] do 
+     end
+   end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

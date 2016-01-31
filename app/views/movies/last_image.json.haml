@@ -1,0 +1,4 @@
+.image{data: {id: @image.id}}
+	%p
+		= image_tag @image.content	
+		%btn.btn.btn-danger.delete-image{data: {path: movie_image_path(@movie, @image)}}= "Delete"

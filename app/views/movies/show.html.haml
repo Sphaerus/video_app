@@ -1,12 +1,24 @@
 %h4= @movie.title
 %p= @movie.description
-.movie
+.movie{data: {id: @movie.id}}
 	= video_tag @movie.movie_file
 .slider
 	%input{type: "range", min: "0", max: "1", step: "0.1"}
 	%input{type: "range", id: "seek-bar", value: "0"}	
-
-
 %p
 	= link_to "edit", edit_movie_path(@movie), class: "btn btn-primary"
 	= link_to "delete", movie_path(@movie), method: :delete, class: "btn btn-danger"
+
+.images
+- @movie.images.reverse.each do |image|
+	.image{data: {id: image.id}}
+		%p
+			= image_tag image.content	
+			%btn.btn.btn-danger.delete-image{data: {path: movie_image_path(@movie, image)}}= "Delete"	
+
+.upload-form
+	= simple_form_for @movie, url: movie_images_path(@movie), method: :post do |f|
+		= f.simple_fields_for :image do |fi|
+			.image-input
+				= fi.input :content, as: :file, accept: "image/jpeg, image/jpg, image/gif, image/png"
+%btn.upload-image.btn.btn-primary= "Upload image"
