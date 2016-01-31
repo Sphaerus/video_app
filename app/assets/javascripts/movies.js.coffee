@@ -2,7 +2,7 @@ jQuery ->
 	####video
 	video = $('video')[0]
 
-	$('.slider').change ->
+	$('.slider .audio').change ->
 		video.volume = $(this).find('input').val()
 
 	$('video').click ->
@@ -17,8 +17,8 @@ jQuery ->
   		return
 
 	$('video').bind 'timeupdate', ->
-		value = 100 / video.duration * video.currentTime
-		$('#seek-bar').val(value)
+		time = 100 / video.duration * video.currentTime
+		$('#seek-bar').val(time)
 		return
 
 	$('#seek-bar').bind 'mousedown', ->

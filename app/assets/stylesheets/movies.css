@@ -9,3 +9,15 @@ video{
 	width: 320px; 
 	height: 240px;
 }
+
+#seek-bar{
+	width: 320px;
+}
+
+.audio-input{
+	position: absolute;
+}
+.audio-input input{
+	margin-left: 20px;
+	margin-top: -20px;
+}
