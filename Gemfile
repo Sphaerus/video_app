@@ -32,7 +32,7 @@ gem 'simple_form'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 #upload
-gem "paperclip", "~> 4.3"
+gem 'carrierwave'
 
 #authentication
 gem 'devise'

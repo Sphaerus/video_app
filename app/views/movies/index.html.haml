@@ -2,7 +2,7 @@
 = link_to "Add new movie", new_movie_path, class: "btn btn-primary"
 
 - @movies.each do |movie|
-	%h4= movie.title
+	%h4= link_to movie.title, movie_path(movie)
 	%p= movie.description
 	%p
 		= link_to "edit", edit_movie_path(movie), class: "btn btn-primary"

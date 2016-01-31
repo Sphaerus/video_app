@@ -9,6 +9,10 @@ class MoviesController < ApplicationController
     @movie = @user.movies.build
   end
 
+  def show
+    @movie = Movie.find(params[:id])
+  end
+
   def edit
     @movie = Movie.find(params[:id])
   end
@@ -49,6 +53,6 @@ class MoviesController < ApplicationController
   private
 
   def movie_params
-    params.require(:movie).permit(:id, :user_id, :title, :description)
+    params.require(:movie).permit(:id, :user_id, :title, :description, :movie_file)
   end
 end
